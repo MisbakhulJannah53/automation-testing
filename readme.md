@@ -44,6 +44,9 @@ if you have install the required packages. you can start to build automation cod
   - Inside "steps" folder you can add *.py folder file to write your automation code.
   - Use same filename for *.feature and *.py -> login.feature and login.py.
   - To write gherkin syntax and the code. you can read the [documentation](https://behave.readthedocs.io/en/latest/tutorial.html)
+  - Run "behave features/login.feature" to run the automation testing for login.
+  - Run "behave features/stock.feature" to run the automation testing for stock.
+
 ```
 
 #### **The Project tree folder**

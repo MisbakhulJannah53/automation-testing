@@ -25,7 +25,7 @@ def launchBrowserAndLogin(context,email,password):
     context.elem.send_keys(Keys.RETURN)
     sleep(3)
 
-@when(u'I click product item and the list from dropdown menu will be shown')
+@when(u'I click barang item and the list from dropdown menu will be shown')
 def step_impl(context):
     context.elem = context.driver.find_element(By.XPATH, "//*[@id='wrapper']/nav/div/div/ul/li[2]/a").click()
     sleep(0.5)
@@ -35,18 +35,18 @@ def step_impl(context):
     context.elem = context.driver.find_element(By.XPATH, "//*[@id='wrapper']/nav/div/div/ul/li[2]/ul/li[2]/a").click()
     sleep(1)
 
-@when(u'I click inventory adjusment button')
+@when(u'I click penyesuaian persediaan button')
 def step_impl(context):
     context.elem = context.driver.find_element(By.XPATH, "//*[@id='page-wrapper']/div[3]/div/div/div/div[2]/div/div/div/div/div/div[1]/div[2]/div/button[2]").click()
     sleep(0.5)
 
-@when(u'i fill the description')
+@when(u'i fill the keterangan')
 def step_impl(context):
     context.elem = context.driver.find_element(By.NAME, "note")
     context.elem.send_keys("Menambahkan stock")
     sleep(0.5)
 
-@when(u'i select the location')
+@when(u'i select the lokasi')
 def step_impl(context):
     context.elem = context.driver.find_element(By.XPATH, "//*[@id='page-wrapper']/div[3]/div/div/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div[3]/div/div/div/div/span/a/i")
     if context.elem:
@@ -70,7 +70,7 @@ def step_impl(context):
     sleep(0.1)
     context.elem = context.driver.find_element(By.XPATH, "//*[@id='page-wrapper']/div[3]/div/div/div/div[2]/div/div/div/div/div[3]/div/button")
 
-@when(u'i click save button')
+@when(u'i click simpan button')
 def step_impl(context):
     context.driver.execute_script("arguments[0].click();", context.elem)
     sleep(5)

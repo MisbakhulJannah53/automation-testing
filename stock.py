@@ -14,25 +14,32 @@ actionChains = ActionChains(driver)
 
 driver.get("https://app.jubelio.com/login")
 # assert "Python" in driver.title
+# to fill email
 elem = driver.find_element(By.NAME, "email")
 elem.clear()
 elem.send_keys("qa.rakamin.jubelio@gmail.com")
 
+# to fill password
 elem = driver.find_element(By.NAME, "password")
 elem.clear()
 elem.send_keys("Jubelio123!")
 elem.send_keys(Keys.RETURN)
 sleep(3)
 
+# to click barang
 elem = driver.find_element(By.XPATH, "//*[@id='wrapper']/nav/div/div/ul/li[2]/a").click()
 sleep(0.5)
+# to click persediaan
 elem = driver.find_element(By.XPATH, "//*[@id='wrapper']/nav/div/div/ul/li[2]/ul/li[2]/a").click()
 sleep(1)
+#to click penyesuaian persediaan button
 elem = driver.find_element(By.XPATH, "//*[@id='page-wrapper']/div[3]/div/div/div/div[2]/div/div/div/div/div/div[1]/div[2]/div/button[2]").click()
 sleep(0.5)
+# to fill description box
 elem = driver.find_element(By.NAME, "note")
-elem.send_keys("Stock baju wanita dengan type long dress")
+elem.send_keys("Menambahkan stock")
 sleep(0.5)
+# to select location
 elem = driver.find_element(By.XPATH, "//*[@id='page-wrapper']/div[3]/div/div/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div[3]/div/div/div/div/span/a/i")
 if elem:
     elem.click()
@@ -43,7 +50,7 @@ sleep(0.1)
 elem = driver.find_element(By.XPATH, "//*[@id='page-wrapper']/div[3]/div/div/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div[3]/div/div/div[2]/div[2]/div[3]")
 elem.click()
 sleep(0.5)
-
+# to add barang
 elem = driver.find_element(By.XPATH, "//*[@id='page-wrapper']/div[3]/div/div/div/div[2]/div/div/div/div/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/div/div/div[2]/div/div/div[1]/div")
 actionChains.double_click(elem).perform()
 sleep(1)

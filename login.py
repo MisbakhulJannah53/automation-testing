@@ -11,10 +11,13 @@ driver = webdriver.Chrome(options=chrome_options)
 
 driver.get("https://app.jubelio.com/login")
 # assert "Python" in driver.title
+
+# this function for fill email
 elem = driver.find_element(By.NAME, "email")
 elem.clear()
 elem.send_keys("qa.rakamin.jubelio@gmail.com")
 
+#for fill the password
 elem = driver.find_element(By.NAME, "password")
 elem.clear()
 elem.send_keys("Jubelio123!")

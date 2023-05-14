@@ -43,7 +43,7 @@ def step_impl(context):
 @when(u'i fill the description')
 def step_impl(context):
     context.elem = context.driver.find_element(By.NAME, "note")
-    context.elem.send_keys("Stock baju wanita dengan type long dress")
+    context.elem.send_keys("Menambahkan stock")
     sleep(0.5)
 
 @when(u'i select the location')
